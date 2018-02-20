@@ -1,16 +1,22 @@
 $(document).ready(function () {
-  //   var mySwiper = new Swiper ('.swiper-container', {
-		// loop: true,
-		// pagination: {
-		// 	el: '.swiper-pagination',
-		// },
-		// navigation: {
-		// 	nextEl: '.swiper-button-next',
-		// 	prevEl: '.swiper-button-prev',
-		// },
-		// speed: 900,
-  //       autoplay: true
-  //   });
+    var mySwiper = new Swiper ('.swiper-container', {
+		direction: 'vertical',
+        loop: true,
+		pagination: {
+			el: '.swiper-pagination',
+		},
+		speed: 900
+        // autoplay: true
+    });
+
+    $('.hamburger').on('click', function() {
+        $(this).toggleClass('active');
+        if ($(this).hasClass('active')) {
+            $('.header__nav').addClass('active');
+        } else {
+            $('.header__nav').removeClass('active')
+        }
+    });
 
     // MixItUp jquery plugin
     // $(function(){

@@ -1,1 +1,1 @@
-$(document).ready(function(){});
+$(document).ready(function(){new Swiper(".swiper-container",{direction:"vertical",loop:!0,pagination:{el:".swiper-pagination"},speed:900});$(".hamburger").on("click",function(){$(this).toggleClass("active"),$(this).hasClass("active")?$(".header__nav").addClass("active"):$(".header__nav").removeClass("active")})});

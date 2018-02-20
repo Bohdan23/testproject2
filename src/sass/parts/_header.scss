@@ -1,0 +1,492 @@
+.hero {
+	height: 760px;
+	position: relative;
+	@include mx(1280) {
+		height: 700px;
+	}
+	@include mx(1080) {
+		height: 650px;
+	}
+	@include mx(924) {
+		height: 570px;
+	}
+	@include mx(768) {
+		height: 500px;
+	}
+	@include mx(480) {
+		height: 100vh;
+		max-height: 550px;
+	}
+	&__info {
+		position: absolute;
+		bottom: 40px;
+		z-index: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+		&-text {
+			margin-bottom: 70px;
+			color: #fff;
+			text-align: center;
+			font-weight: 300;
+			strong {
+				font-weight: 700;
+			}
+			.big {
+				font-size: 62px;
+			}
+			.middle {
+				font-size: 48px;
+				margin-top: 20px;
+			}
+			.small {
+				font-size: 18px;
+				margin-top: 28px;
+				span {
+					position: relative;
+					&:before, &:after {
+						content: '';
+						display: block;
+						position: absolute;
+						width: 28px;
+						height: 1px;
+						background: #0fde95;
+						top: 50%;
+						transform: translate(0, -50%);
+					}
+					&:before {
+						left: -22%;
+					}
+					&:after {
+						right: -22%;
+					}
+				}
+			}
+			.green {
+				color: #0fde95;
+			}
+			@include mx(1500) {
+				margin-bottom: 60px;
+				.big {
+					font-size: 58px;
+				}
+				.middle {
+					font-size: 44px;
+				}
+				.small {
+					font-size: 17px;
+					margin-top: 23px;
+				}
+			}
+			@include mx(1280) {
+				margin-bottom: 50px;
+				.big {
+					font-size: 50px;
+				}
+				.middle {
+					font-size: 37px;
+					margin-top: 15px;
+				}
+				.small {
+					font-size: 16px;
+					margin-top: 20px;
+					span {
+						&:before, &:after {
+							width: 22px;
+							top: 58%;
+						}
+						&:before {
+							left: -18%;
+						}
+						&:after {
+							right: -18%;
+						}
+					}
+				}
+			}
+			@include mx(1080) {
+				margin-bottom: 45px;
+				.big {
+					font-size: 47px;
+				}
+				.middle {
+					font-size: 33px;
+				}
+				.small {
+					font-size: 15px;
+				}
+			}
+			@include mx(924) {
+				margin-bottom: 40px;
+				.big {
+					font-size: 40px;
+				}
+				.middle {
+					font-size: 25px;
+					margin-top: 10px;
+				}
+				.small {
+					font-size: 13px;
+					margin-top: 15px;
+					span {
+						&:before, &:after {
+							width: 17px;
+							top: 53%;
+						}
+						&:before {
+							left: -17%;
+						}
+						&:after {
+							right: -17%;
+						}
+					}
+				}
+			}
+			@include mx(768) {
+				margin-bottom: 30px;
+				.big {
+					font-size: 33px;
+				}
+				.middle {
+					font-size: 17px;
+					margin-top: 7px;
+				}
+				.small {
+					font-size: 11px;
+					span {
+						&:before, &:after {
+							width: 12px;
+							top: 53%;
+						}
+						&:before {
+							left: -14%;
+						}
+						&:after {
+							right: -14%;
+						}
+					}
+				}
+			}
+			@include mx(480) {
+				margin-bottom: 20px;
+				.big {
+					font-size: 24px;
+				}
+				.middle {
+					font-size: 12px;
+				}
+				.small {
+					font-size: 9.5px;
+					margin-top: 10px;
+					span {
+						&:before, &:after {
+							width: 9px;
+							top: 55%;
+						}
+						&:before {
+							left: -11%;
+						}
+						&:after {
+							right: -11%;
+						}
+					}
+				}
+			}
+		}
+		&-social {
+			display: flex;
+			justify-content: center;
+			a {
+				display: block;
+				width: 20px;
+				height: 20px;
+				margin: 0 10px;
+				opacity: 1;
+				transition: opacity .25s ease-in-out;
+				img {
+					max-width: 100%;
+					max-height: 100%;
+				}
+				@include mn(768) {
+					opacity: 0.3;
+					&:hover {
+						opacity: 1;
+					}
+				}
+			}
+			@include mx(1280) {
+				a {
+					width: 18px;
+					height: 18px;
+					margin: 0 8px;
+				}
+			}
+			@include mx(1080) {
+				a {
+					width: 17px;
+					height: 17px;
+				}
+			}
+			@include mx(924) {
+				a {
+					width: 14px;
+					height: 14px;
+				}
+			}
+			@include mx(768) {
+				a {
+					width: 12px;
+					height: 12px;
+					margin: 0 7px;
+				}
+			}
+			@include mx(480) {
+				a {
+					width: 11px;
+					height: 11px;
+				}
+			}
+		}
+	}
+}
+
+/*begin Slider*/
+.swiper {
+	&-container {
+		height: 100%;
+		z-index: 0;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&-pagination {
+		right: 45px;
+		&-bullet {
+			width: 8px;
+			height: 8px;
+			background: transparent;
+			border: 1px solid #f2f2f2;
+			margin: 9px 0 !important;
+		}
+		&-bullet-active {
+			background: #fff;
+		}
+	}
+	@include mx(924) {
+		&-pagination {
+			&-bullet {
+				width: 7px;
+				height: 7px;
+			}
+		}
+	}
+	@include mx(768) {
+		&-pagination {
+			&-bullet {
+				width: 6px;
+				height: 6px;
+				margin: 8px 0 !important;
+			}
+		}
+	}
+	@include mx(480) {
+		height: 100vh;
+		max-height: 550px;
+	}
+}
+/*end Slider*/
+
+/*begin Header*/
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 70px;
+	z-index: 1;
+	background: rgba(16, 22, 54, .2);
+	& > .container-small {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__logo {
+		z-index: 11;
+	}
+	&__nav {
+		height: 100%;
+		display: flex;
+		transition: left .5s ease-in-out;
+		li {
+			position: relative;
+			& + li {
+				margin-left: 27px;
+			}
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				height: 1px;
+				width: 0;
+				top: 0;
+				left: 0;
+				background: #32b0ee;
+				transition: width .25s ease-out;
+			}
+			&.active {
+				&:after {
+					width: 100%;
+				}
+			}
+			@include mn(768) {
+				&:hover:after {
+					width: 100%;
+				}
+			}
+		}
+		a {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			color: #ffffff;
+		}
+	}
+	.hamburger {
+		width: 30px;
+		height: 20px;
+		position: relative;
+		transform: rotate(0deg);
+		transition: .5s ease-in-out;
+		cursor: pointer;
+		display: none;
+		z-index: 11;
+		span {
+			display: block;
+			position: absolute;
+			height: 3px;
+			width: 100%;
+			background: #fff;
+			border-radius: 9px;
+			opacity: 1;
+			left: 0;
+			transform: rotate(0deg);
+			transition: .25s ease-in-out;
+			&:nth-child(1) {
+		  		top: 0px;
+			}
+			&:nth-child(2), &:nth-child(3) {
+		  		top: 8px;
+			}
+			&:nth-child(4) {
+		  		top: 16px;
+			}
+		}
+		&.active {
+			span {
+				&:nth-child(1) {
+			  		top: 8px;
+					width: 0%;
+					left: 50%;
+				}
+				&:nth-child(2) {
+			  		transform: rotate(45deg);
+				}
+				&:nth-child(3) {
+			  		transform: rotate(-45deg);
+				}
+				&:nth-child(4) {
+			  		top: 8px;
+		 			width: 0%;
+	  				left: 50%;
+				}
+			}
+		}
+	}
+	@include mx(1080) {
+		&__nav {
+			li {
+				& + li {
+					margin-left: 23px;
+				}
+			}
+			a {
+				font-size: 12px;
+			}
+		}
+	}
+	@include mx(924) {
+		&__logo {
+			width: 80px;
+			img {
+				width: 100%;
+			}
+		}
+		&__nav {
+			li {
+				& + li {
+					margin-left: 20px;
+				}
+			}
+			a {
+				font-size: 11px;
+			}
+		}
+	}
+	@include mx(768) {
+		height: 60px;
+		&__logo {
+			width: 70px;
+		}
+		&__nav {
+		    background: rgba(0,0,0,.7);
+		    width: 100%;
+		    position: fixed;
+		    height: 100%;
+		    left: 100%;
+		    top: 0;
+		    z-index: 10;
+		    display: grid;
+		    align-content: center;
+			li {
+				width: 100%;
+				& + li {
+					margin: 30px 0 0 0;
+				}
+				&.active {
+					&:after {
+						display: none;
+					}
+					a {
+						color: #32b0ee;
+					}
+				}
+			}
+			a {
+				font-size: 19px;
+				text-align: center;
+				display: block;
+			}
+			&.active {
+				left: 0;
+			}
+		}
+		.hamburger {
+			display: block;
+		}
+	}
+	@include mx(480) {
+		&__nav {
+			li {
+				& + li {
+					margin: 25px 0 0 0;
+				}
+			}
+			a {
+				font-size: 17px;
+			}
+		}
+	}
+}
+/*end Header*/

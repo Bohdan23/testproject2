@@ -1,20 +1,43 @@
 @import "helpers/_reset.scss";
 @import "helpers/_fonts.scss";
-/*@import "helpers/_variables.scss";*/
+@import "helpers/_variables.scss";
 
 * {
 	box-sizing: border-box;
 }
 
-body {
+
+body { 
 	min-width: 320px;
 	font-family: opensans, sans-serif;
 	font-size: 13px;
 	font-weight: 400;
 }
 
-a {
+a { 
 	text-decoration: none;
 }
 
 
+.container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.container {
+	&-main {
+		@extend .container;
+		/*border: 1px solid green;*/
+		max-width: 1600px;
+	}
+	&-small {
+		@extend .container;
+		/*border: 1px solid red;*/
+		max-width: 1170px;
+		@include mx(1280) {
+			padding: 0 25px;
+		}
+	}
+}
+
+@import "parts/_header.scss";
