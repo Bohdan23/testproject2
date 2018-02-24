@@ -1,0 +1,355 @@
+.contacts {
+	&__wrapper {
+		margin-top: 65px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__location {
+		min-width: 230px;
+	}
+	&__topic {
+		color: #062033;
+		font-size: 20px;
+		line-height: 1.5;
+		margin-bottom: 30px;
+	}
+	&__adress {
+		font-size: 13px;
+		line-height: 1.7;
+		span, a {
+			color: #062033;
+		}
+	}
+
+	&__form {
+		width: calc(100% - 160px);
+		font-size: 0;
+		.input-wrapper, .textarea-wrapper {
+			height: 40px;
+			font-size: 13px;
+			line-height: 1.8;
+			color: #b8bbbf;
+			position: relative;
+			transition: .5s ease-in-out;
+			span {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				height: 100%;
+				z-index: -1;
+				width: 100%;
+				border-bottom: 1px solid #cccccc;
+				transition: .5s ease-in-out;
+				&:after {
+					content: '';
+					display: block;
+					position: absolute;
+					width: 0;
+					left: 50%;
+					bottom: -1px;
+					height: 2px;
+					background: #0eb493;
+					transition: .4s ease-in-out;
+				}
+				&.focused {
+					height: 145%;
+					font-size: 11px;
+					color: #0eb493;
+					&:after {
+						width: 100%;
+						left: 0;
+					}
+				}
+			}
+		}
+		.input-wrapper {
+			width: 48%;
+			display: inline-block;
+			& + .input-wrapper {
+				margin-left: 4%;
+			}
+		}
+		.textarea-wrapper {
+			margin: 35px 0 25px 0;
+		}
+		input, textarea {
+			height: 100%;
+			width: 100%;
+			outline: none;
+			border: none;
+			resize: none;
+			background: transparent;
+			font-family: opensans;
+			font-size: 14px;
+			&:focus {
+				& + span {
+					height: 145%;
+					font-size: 11px;
+					color: #0eb493;
+					&:after {
+						width: 100%;
+						left: 0;
+					}
+				}
+			}
+		}
+		textarea {
+			padding-top: 12px;
+		}
+		.submit-wrapper {
+			float: right;
+			font-size: 17.5px; 
+			color: #0eb493;
+			position: relative;
+			i {
+				position: absolute;
+				top: 49%;
+				transform: translate(0, -50%);
+			}
+		}
+		input[type="submit"] {
+			font-size: 16px;
+			color: #000;
+			cursor: pointer;
+			text-align: right;
+			width: 140px;
+			position: relative;
+			background: transparent;
+			transition: .4s ease-in-out;
+		}
+	}
+	&__greeting {
+		font-size: 24px;
+		font-weight: 700;
+		color: #062033;
+		margin-bottom: 40px;
+	}
+
+	&__social {
+		min-width: 80px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		a {
+			font-size: 23px;
+			color: rgba(6,32,51,1);
+			transition: .3s ease-in-out;
+			margin: 9px 0;
+		}
+	}
+	@include mx(1500) {
+		&__topic {
+			font-size: 19px;
+			line-height: 1.4;
+			margin-bottom: 25px;
+		}
+		&__form {
+			width: calc(100% - 120px);
+			.input-wrapper, .textarea-wrapper {
+				height: 36px;
+			}
+			textarea {
+				padding-top: 11px;
+			}
+		}
+		&__greeting {
+			font-size: 23px;
+			margin-bottom: 35px;
+			line-height: 1.1;
+		}
+
+		&__social {
+			a {
+				font-size: 21px;
+			}
+		}
+	}
+	@include mx(1280) {
+		&__wrapper {
+			margin-top: 60px;
+		}
+		&__topic {
+			font-size: 17.5px;
+			line-height: 1.3;
+		}
+		&__adress {
+			line-height: 1.6;
+		}
+		&__form {
+			.input-wrapper, .textarea-wrapper {
+				height: 33px;
+				font-size: 12.5px;
+				line-height: 2;
+				span {
+					&:after {
+						height: 1.5px;
+					}
+				}
+			}
+			.textarea-wrapper {
+				margin: 30px 0 25px 0;
+			}
+			.submit-wrapper {
+				font-size: 17px; 
+			}
+			input[type="submit"] {
+				font-size: 15px;
+				width: 130px;
+			}
+		}
+		&__greeting {
+			font-size: 20px;
+			margin-bottom: 30px;
+		}
+		&__social {
+			min-width: 75px;
+			a {
+				font-size: 20px;
+				margin: 7px 0;
+			}
+		}
+	}
+	@include mx(1080) {
+		&__wrapper {
+			margin-top: 60px;
+		}
+		&__location {
+			min-width: 200px;
+		}
+		&__topic {
+			font-size: 15px;
+			margin-bottom: 20px;
+		}
+		&__adress {
+			font-size: 12.5px;
+		}
+		&__form {
+			.input-wrapper, .textarea-wrapper {
+				height: 32px;
+				font-size: 11.5px;
+				line-height: 2.5;
+				span {
+					&:after {
+						height: 1.5px;
+					}
+					&.focused {
+						font-size: 10px;
+					}
+				}
+			}
+			input, textarea {
+				font-size: 13px;
+				&:focus {
+					& + span {
+						height: 145%;
+						font-size: 10px;
+					}
+				}
+			}
+			.textarea-wrapper {
+				margin: 25px 0;
+			}
+			.submit-wrapper {
+				font-size: 15px; 
+				i {
+					top: 52%;
+				}
+			}
+			input[type="submit"] {
+				font-size: 14px;
+				width: 120px;
+			}
+		}
+		&__greeting {
+			font-size: 18px;
+			line-height: 1.2;
+		}
+		&__social {
+			min-width: 65px;
+			a {
+				font-size: 18px;
+			}
+		}
+	}
+	@include mn(768) {
+		&__social {
+			a {
+				color: rgba(6,32,51,.2);
+				&:hover {
+					color: rgba(6,32,51,1);
+				}
+			}
+		}
+		&__form {
+			input[type="submit"] {
+				&:hover {
+					color: #0eb493;
+				}
+			}
+		}
+	}
+	@include mx(768) {
+		&__wrapper {
+			display: block;
+			max-width: 480px;
+		    margin: 55px auto 0 auto;
+		    text-align: center;
+		}
+		&__location {
+			margin-bottom: 35px;
+		}
+		&__topic {
+			font-size: 16px;
+		}
+		&__adress {
+			font-size: 13px;
+			line-height: 1.8;
+		}
+		&__form {
+			width: 100%;
+			margin-bottom: 35px;
+			.input-wrapper {
+				width: 100%;
+				& + .input-wrapper {
+					margin: 30px 0;
+				}
+			}
+			.input-wrapper, .textarea-wrapper {
+				height: 32px;
+				font-size: 11.5px;
+				line-height: 1.5;
+			}
+			input, textarea {
+				font-size: 13px;
+				text-align: center;
+			}
+			textarea {
+				padding-top: 8px;
+			}
+			.textarea-wrapper {
+				margin: 0 0 30px 0;
+			}
+			.submit-wrapper {
+				float: none;
+				i {
+					top: 55%;
+				}
+			}
+			input[type="submit"] {
+				width: 122px;
+			}
+		}
+		&__greeting {
+			font-size: 18px;
+			line-height: 1.2;
+		}
+		&__social {
+			display: block;
+			a {
+				margin: 0 8px;
+			}
+		}
+	}
+}

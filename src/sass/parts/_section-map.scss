@@ -1,0 +1,21 @@
+.section-map {
+	width: 100%;
+	height: 215px;
+	border-bottom: 5px solid #062033;
+	margin-top: 60px;
+	iframe {
+		width: 100%;
+		height: 100%;
+		border: none;
+	}
+	@include mx(1280) {
+		height: 200px;
+	}
+	@include mx(924) {
+		height: 180px;
+	}
+	@include mx(768) {
+		height: 150px;
+		margin-top: 45px;
+	}
+}

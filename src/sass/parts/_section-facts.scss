@@ -1,0 +1,154 @@
+.section-facts {
+	height: 600px;
+	padding: 0;
+	margin: 75px 0 0 0;
+	position: relative;
+	& > .container-small {
+		position: relative;
+		height: 100%;
+		.section-title__wrapper {
+			padding-top: 5%;
+		}
+	}
+	@include mx(1500) {
+		height: 550px;
+		margin: 70px 0 0 0;
+		& > .container-small {
+			.section-title__wrapper {
+				padding-top: 4%;
+			}
+		}
+	}
+	@include mx(1280) {
+		height: 525px;
+	}
+	@include mx(1080) {
+		height: 470px;
+	}
+	@include mx(768) {
+		& > .container-small {
+			.section-title__wrapper {
+				padding-top: 9%;
+			}
+		}
+	}
+	@include mx(480) {
+		height: 850px;
+	}
+}
+
+.facts {
+	&__wrapper {
+		width: 100%;
+		position: absolute;
+		top: 55%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		@include mx(480) {
+			flex-wrap: wrap;
+			position: relative;
+			top: auto;
+			left: auto;
+			transform: none;
+			margin: 40px 0 0 0;
+		}
+	}
+	&__box {
+		color: #ffffff;
+		text-align: center;
+		&-icon {
+			height: 120px;
+			width: 120px;
+			border: 2px solid #7f7983;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto;
+			img {
+				width: 35px;
+			}
+		}
+		&-number {
+			font-size: 48px;
+			font-weight: 600;
+			margin: 30px 0 10px 0;
+		}
+		&-text {
+			font-size: 15px;
+			text-transform: uppercase;
+		}
+		@include mx(1500) {
+			&-icon {
+				width: 110px;
+				height: 110px;
+				img {
+					width: 33px;
+				}
+			}
+			&-number {
+				font-size: 42px;
+				margin: 25px 0 10px;
+			}
+			&-text {
+				font-size: 14px;
+			}
+		}
+		@include mx(1280) {
+			&-icon {
+				width: 100px;
+				height: 100px;
+				img {
+					width: 30px;
+				}
+			}
+			&-number {
+				font-size: 38px;
+				margin: 20px 0 10px;
+			}
+			&-text {
+				font-size: 13px;
+			}
+		}
+		@include mx(1080) {
+			&-icon {
+				width: 90px;
+				height: 90px;
+				img {
+					width: 25px;
+				}
+			}
+			&-number {
+				font-size: 31px;
+				margin: 15px 0 10px;
+			}
+			&-text {
+				font-size: 12px;
+			}
+		}
+		@include mx(768) {
+			&-icon {
+				width: 80px;
+				height: 80px;
+				img {
+					width: 23px;
+				}
+			}
+			&-number {
+				font-size: 26px;
+			}
+			&-text {
+				font-size: 10px;
+			}
+		}
+		@include mx(480) {
+			width: 100%;
+			& + .facts__box {
+				margin-top: 40px;
+			}
+		}
+	}
+}

@@ -1,0 +1,192 @@
+.portfolio {
+	&__filter {
+		text-align: center;
+		margin: 45px 0 40px;
+		@include mx(768) {
+			margin: 35px 0 30px; 
+		}
+		@include mx(480) {
+			width: 100%;
+		    display: grid;
+		    grid-gap: 10px;
+		    justify-items: center;
+		}
+	}
+	&__filter-button {
+		background: transparent;
+		border: none;
+		outline: none;
+		padding: 0 15px;
+		line-height: 24px;
+		font-size: 14px;
+		color: #062033;
+		font-weight: 700;
+		cursor: pointer;
+		position: relative;
+		border-radius: 3px;
+		transition: .3s ease-in-out;
+		& + .filter__button {
+			margin-left: 20px;
+		}
+		&:before, &:after {
+			content: '';
+			display: block;
+			background: #0eb493;
+			position: absolute;
+			height: 50%;
+			width: 0;
+			opacity: 0;
+			transition: .3s ease-in-out;
+			z-index: -1;
+		}
+		&:before {
+			top: 0;
+			left: 0;
+			border-top-left-radius: 3px;
+			border-top-right-radius: 3px;
+		}
+		&:after {
+			bottom: 0;
+			right: 0;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		&.active {
+			color: #ffffff;
+			&:before, &:after {
+				width: 100%;
+				opacity: 1;
+			}
+		}
+		@include mn(768) {
+			&:hover {
+				color: #fff;
+				&:before, &:after {
+					width: 100%;
+					opacity: 1;
+				}
+			}
+		}
+		@include mx(768) {
+			font-size: 13px;
+			padding: 0 13px;
+			margin: 0 2px;
+			line-height: 23px; 
+		}
+	}
+	&__wrapper {
+		margin-top: 35px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__block {
+		width: 25%;
+		height: 300px;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&-description {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: rgba(14, 180, 147, .9);
+			text-align: center;
+			color: #ffffff;
+			display: grid;
+			align-content: center;
+			justify-content: center;
+			transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+			transform: scale(0.1) rotate(30deg);
+			transform-origin: center bottom;
+			opacity: 0;
+			img {
+				width: auto;
+				height: auto;
+				margin: 0 auto;
+			}
+		}
+		&-name {
+			font-size: 18px;
+			line-height: 20px;
+			font-weight: 700;
+			margin: 25px 0 10px 0;
+			width: 100%;
+		}
+		&-category {
+			font-size: 14px;
+			width: 100%;
+		}
+		@include mn(768) {
+			&:hover {
+				.portfolio__block-description {
+					transform: scale(1);
+					opacity: 1;
+				}
+			}
+		}
+		@include mx(1500) {
+			height: 260px;
+		}
+		@include mx(1280) {
+			width: calc(100%/3);
+			height: 230px;
+		}
+		@include mx(1080) {
+			&-name {
+				font-size: 15px;
+				line-height: 17px;
+				margin: 20px 0 8px;
+			}
+			&-description {
+				img {
+					width: 35px;
+					height: 35px;
+				}
+			}
+			&-category {
+				font-size: 13px;
+			}
+		}
+		@include mx(924) {
+			width: 50%;
+			height: 200px;
+		}
+		@include mx(768) {
+			&-description {
+				height: auto;
+				top: auto;
+				bottom: 0;
+				background-color: rgba(14, 180, 147, .8);
+				display: block;
+				transform: scale(1);
+				opacity: 1;
+				img {
+					display: none;
+				}
+			}
+			&-name {
+				font-size: 12px;
+				margin: 8px 0;
+				padding: 0 7px;
+			}
+			&-category {
+				display: none;
+			}
+		}
+		@include mx(600) {
+			width: 100%;
+			max-width: 480px;
+			margin: 0 auto;
+			& + .portfolio__block {
+				margin-top: 15px;
+			}
+		}
+	}
+}

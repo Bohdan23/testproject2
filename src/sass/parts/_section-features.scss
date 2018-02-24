@@ -1,0 +1,118 @@
+.section {
+	&-features {
+		background: #f4f7f9;
+	}
+	&-box {
+		text-align: left;
+		padding-left: 55px;
+		position: relative;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			top: 0;
+			left: 0;
+			background-size: cover;
+			background-position: 50% 50%;
+		}
+		&.branding {
+			&:before {
+				background-image: url('../img/icons/feather.png');
+			}
+		}
+		&.development {
+			&:before {
+				background-image: url('../img/icons/pen.png');
+			}
+		}
+		&.consulting {
+			&:before {
+				background-image: url('../img/icons/speaker.png');
+			}
+		}
+		& + .section-box {
+			margin-left: 30px;
+		}
+		&__wrapper {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 55px;
+		}
+		&__title {
+			color: #062033;
+			font-size: 20px;
+			font-weight: 600;
+			margin-bottom: 20px;
+		}
+		&__text {
+			line-height: 1.6;
+			color: #717982;
+		}
+	}
+	@include mx(1080) {
+		&-box {
+			padding-left: 50px;
+			&:before {
+				width: 37px;
+				height: 37px;
+			}
+			& + .section-box {
+				margin-left: 30px;
+			}
+			&__title {
+				font-size: 18px;
+				margin-bottom: 15px;
+			}
+		}
+	}
+	@include mx(924) {
+		&-box {
+			margin: 0 auto;
+			width: 100%;
+			max-width: 350px;
+			padding: 50px 0 0 0;
+			text-align: center;
+			&:before {
+				top: 0;
+				left: 50%;
+				transform: translate(-50%, 0);
+			}
+			& + .section-box {
+				margin: 30px auto 0 auto;
+			}
+			&__wrapper {
+				display: block;
+				margin-top: 50px;
+			}
+			&__title {
+				font-size: 20px;
+				margin-bottom: 10px;
+			}
+			&__text {
+				line-height: 1.6;
+			}
+		}
+	}
+	@include mx(480) {
+		&-box {
+			&:before {
+				top: 0;
+				left: 50%;
+				transform: translate(-50%, 0);
+			}
+			& + .section-box {
+				margin: 20px auto 0 auto;
+			}
+			&__title {
+				font-size: 18px;
+				margin-bottom: 8px;
+			}
+			&__text {
+				line-height: 1.6;
+				font-size: 12px;
+			}
+		}
+	}
+}

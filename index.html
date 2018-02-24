@@ -4,12 +4,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Test Ptoject</title>
+	<link rel="stylesheet" href="web/css/vendor/font-awesome/font-awesome.css">
 	<link rel="stylesheet" href="web/css/vendor/swiper.min.css">
 	<link rel="stylesheet" href="web/css/main.css">
 </head>
 <body>
 	<div class="container-main">
-		<section class="hero">
+		<!-- begin HEADER -->
+		<section class="hero" id="home">
 			<!-- begin Slider -->
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
@@ -33,19 +35,22 @@
 					</div>
 					<ul class="header__nav">
 						<li class="active">
-							<a href="javascript:void(0)">Home</a>
+							<a href="#home">Home</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)">Features</a>
+							<a href="#features">Features</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)">Works</a>
+							<a href="#works">Works</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)">Team</a>
+							<a href="#team">Team</a>
 						</li>
 						<li>
-							<a href="javascript:void(0)">Contact</a>
+							<a href="#facts">Facts</a>
+						</li>
+						<li>
+							<a href="#contacts">Contacts</a>
 						</li>
 					</ul>
 					<div class="hamburger">
@@ -57,31 +62,386 @@
 				</div>
 			</header>
 			<!-- end Header -->
-			<!-- begin Info -->
+			<!-- begin Info-text -->
 			<div class="hero__info">
 				<div class="hero__info-text">
-					<p class="big">Meet <strong>Brandi</strong>!</p>
-					<p class="middle"><span class="green">/creative</span> one page template.</p>
-					<p class="small"><span>We are a team of professionals</span></p>
+					<h1 class="big">Meet <strong>Brandi</strong>!</h1>
+					<h3 class="middle"><span class="green">/creative</span> one page template.</h3>
+					<h5 class="small"><span>We are a team of professionals</span></h5>
 				</div>
 				<div class="hero__info-social">
 					<a href="javascript:void(0)">
-						<img src="web/img/icons/twitter.svg" alt="twitter">
+						<i class="fa fa-twitter"></i>
 					</a>
 					<a href="javascript:void(0)">
-						<img src="web/img/icons/facebook.svg" alt="facebook">
+						<i class="fa fa-facebook"></i>
 					</a>
 					<a href="javascript:void(0)">
-						<img src="web/img/icons/google.svg" alt="google">
-					</a>
-					<a href="javascript:void(0)">
-						<img src="web/img/icons/dribble.svg" alt="dribble">
+						<i class="fa fa-google-plus"></i>
 					</a>
 				</div>
 			</div>
-			<!-- end Info -->
+			<!-- end Info-text -->
 		</section>
+		<!-- end HEADER -->
+		<!-- begin FEATURES -->
+		<section class="section-block section-features" id="features">
+			<div class="container-small">
+				<div class="section-title__wrapper">
+					<span class="section-title">
+						Features
+						<img src="web/img/icons/heart.png" alt="heart">
+					</span>
+				</div>
+				<div class="section-box__wrapper">
+					<div class="section-box branding">
+						<p class="section-box__title">Branding</p>
+						<p class="section-box__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+					</div>
+					<div class="section-box development">
+						<p class="section-box__title">Development</p>
+						<p class="section-box__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+					</div>
+					<div class="section-box consulting">
+						<p class="section-box__title">Consulting</p>
+						<p class="section-box__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end FEATURES -->
+		<!-- begin WORKS -->
+		<section class="section-block section-works" id="works">
+			<div class="section-title__wrapper">
+				<span class="section-title">
+					Works
+					<img src="web/img/icons/heart.png" alt="heart">
+				</span>
+			</div>
+			<p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+			<div class="portfolio__filter">
+				<button class="portfolio__filter-button filter active" data-filter="all">All</button>
+				<button class="portfolio__filter-button filter" data-filter=".category-branding">Branding</button>
+				<button class="portfolio__filter-button filter" data-filter=".category-web">Web</button>
+				<button class="portfolio__filter-button filter" data-filter=".category-logo">Logo Design</button>
+				<button class="portfolio__filter-button filter" data-filter=".category-photography">Photography</button>
+			</div>
+			<div class="portfolio__wrapper">
+				<div class="portfolio__block mix category-photography" data-myorder="1">
+					<img src="web/img/portfolio/layer1.png" class="main-img" alt="image">
+					<div class="portfolio__block-description">
+						<img src="web/img/icons/eye.png" alt="eye">
+						<p class="portfolio__block-name">Labore et dolore magnam</p>
+						<p class="portfolio__block-category">Photography</p>
+					</div>
+				</div>
+				<div class="portfolio__block mix category-web category-logo" data-myorder="2">
+					<img src="web/img/portfolio/layer2.png" class="main-img" alt="image">
+					<div class="portfolio__block-description">
+						<img src="web/img/icons/eye.png" alt="eye">
+						<p class="portfolio__block-name">Labore et dolore magnam</p>
+						<p class="portfolio__block-category">Web, Logo Design</p>
+					</div>
+				</div>
+				<div class="portfolio__block mix category-branding" data-myorder="3">
+					<img src="web/img/portfolio/layer3.png" class="main-img" alt="image">
+					<div class="portfolio__block-description">
+						<img src="web/img/icons/eye.png" alt="eye">
+						<p class="portfolio__block-name">Labore et dolore magnam</p>
+						<p class="portfolio__block-category">Branding</p>
+					</div>
+				</div>
+				<div class="portfolio__block mix category-logo category-photography" data-myorder="4">
+					<img src="web/img/portfolio/layer4.png" class="main-img" alt="image">
+					<div class="portfolio__block-description">
+						<img src="web/img/icons/eye.png" alt="eye">
+						<p class="portfolio__block-name">Labore et dolore magnam</p>
+						<p class="portfolio__block-category">Logo Design, Photography</p>
+					</div>
+				</div>
+				<div class="portfolio__block mix category-web" data-myorder="5">
+					<img src="web/img/portfolio/layer5.png" class="main-img" alt="image">
+					<div class="portfolio__block-description">
+						<img src="web/img/icons/eye.png" alt="eye">
+						<p class="portfolio__block-name">Labore et dolore magnam</p>
+						<p class="portfolio__block-category">Web</p>
+					</div>
+				</div>
+				<div class="portfolio__block mix category-photography" data-myorder="6">
+					<img src="web/img/portfolio/layer6.png" class="main-img" alt="image">
+					<div class="portfolio__block-description">
+						<img src="web/img/icons/eye.png" alt="eye">
+						<p class="portfolio__block-name">Labore et dolore magnam</p>
+						<p class="portfolio__block-category">Photography</p>
+					</div>
+				</div>
+				<div class="portfolio__block mix category-logo" data-myorder="7">
+					<img src="web/img/portfolio/layer7.png" class="main-img" alt="image">
+					<div class="portfolio__block-description">
+						<img src="web/img/icons/eye.png" alt="eye">
+						<p class="portfolio__block-name">Labore et dolore magnam</p>
+						<p class="portfolio__block-category">Logo Design</p>
+					</div>
+				</div>
+				<div class="portfolio__block mix category-branding category-web" data-myorder="8">
+					<img src="web/img/portfolio/layer8.png" class="main-img" alt="image">
+					<div class="portfolio__block-description">
+						<img src="web/img/icons/eye.png" alt="eye">
+						<p class="portfolio__block-name">Labore et dolore magnam</p>
+						<p class="portfolio__block-category">Branding, Web</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end WORKS -->
+		<!-- begin TEAM -->
+		<section class="section-block section-team" id="team">
+			<div class="container-small">
+				<div class="section-title__wrapper">
+					<span class="section-title">
+						Meet our team
+						<img src="web/img/icons/heart.png" alt="heart">
+					</span>
+				</div>
+				<p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+				<div class="team__wrapper">
+					<div class="team__box">
+						<div class="team__box-photo">
+							<img src="web/img/team/photo1.png" alt="Worker">
+							<div class="team__box-info">
+								<p class="team__box-description"><span class="bold">Nemo enim ipsam voluptatem quia voluptas</span><br> sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
+								<div class="team__box-social">
+									<a href="javascript:void(0)">
+										<i class="fa fa-twitter"></i>
+									</a>
+									<a href="javascript:void(0)">
+										<i class="fa fa-facebook"></i>
+									</a>
+									<a href="javascript:void(0)">
+										<i class="fa fa-google-plus"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<p class="team__box-name">John Filmr Doe</p>
+						<p class="team__box-position">Managing Director</p>
+					</div>
+					<div class="team__box">
+						<div class="team__box-photo">
+							<img src="web/img/team/photo2.png" alt="Worker">
+							<div class="team__box-info">
+								<p class="team__box-description"><span class="bold">Nemo enim ipsam voluptatem quia voluptas</span><br> sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
+								<div class="team__box-social">
+									<a href="javascript:void(0)">
+										<i class="fa fa-twitter"></i>
+									</a>
+									<a href="javascript:void(0)">
+										<i class="fa fa-facebook"></i>
+									</a>
+									<a href="javascript:void(0)">
+										<i class="fa fa-google-plus"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<p class="team__box-name">Chystine Hineu</p>
+						<p class="team__box-position">Lead Designer</p>
+					</div>
+					<div class="team__box">
+						<div class="team__box-photo">
+							<img src="web/img/team/photo3.png" alt="Worker">
+							<div class="team__box-info">
+								<p class="team__box-description"><span>Nemo enim ipsam voluptatem quia voluptas</span><br> sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
+								<div class="team__box-social">
+									<a href="javascript:void(0)">
+										<i class="fa fa-twitter"></i>
+									</a>
+									<a href="javascript:void(0)">
+										<i class="fa fa-facebook"></i>
+									</a>
+									<a href="javascript:void(0)">
+										<i class="fa fa-google-plus"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<p class="team__box-name">Martin Matrone</p>
+						<p class="team__box-position">Lead Developer</p>
+					</div>
+					<div class="team__box">
+						<div class="team__box-photo">
+							<img src="web/img/team/photo4.png" alt="Worker">
+							<div class="team__box-info">
+								<p class="team__box-description"><span class="bold">Nemo enim ipsam voluptatem quia voluptas</span><br> sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
+								<div class="team__box-social">
+									<a href="javascript:void(0)">
+										<i class="fa fa-twitter"></i>
+									</a>
+									<a href="javascript:void(0)">
+										<i class="fa fa-facebook"></i>
+									</a>
+									<a href="javascript:void(0)">
+										<i class="fa fa-google-plus"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<p class="team__box-name">Steve Flaulkin</p>
+						<p class="team__box-position">Sr. UI Designer</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end TEAM -->
+		<!-- begin FACTS -->
+		<section class="section-block section-facts" data-parallax="scroll" data-image-src="web/img/parallax/parallax.png" id="facts">
+			<div class="container-small">
+				<div class="section-title__wrapper">
+					<span class="section-title white">
+						Some fun facts
+						<img src="web/img/icons/heart-w.png" alt="heart">
+					</span>
+				</div>
+				<div class="facts__wrapper">
+					<div class="facts__box">
+						<div class="facts__box-icon">
+							<img src="web/img/icons/clock.svg" alt="clock">
+						</div>
+						<p class="facts__box-number">3200</p>
+						<p class="facts__box-text">Hours of work</p>
+					</div>
+					<div class="facts__box">
+						<div class="facts__box-icon">
+							<img src="web/img/icons/group.svg" alt="group">
+						</div>
+						<p class="facts__box-number">120</p>
+						<p class="facts__box-text">Satisfied Clinets</p>
+					</div>
+					<div class="facts__box">
+						<div class="facts__box-icon">
+							<img src="web/img/icons/rocket.svg" alt="rocket">
+						</div>
+						<p class="facts__box-number">360</p>
+						<p class="facts__box-text">Projects delivered</p>
+					</div>
+					<div class="facts__box">
+						<div class="facts__box-icon">
+							<img src="web/img/icons/trophy.svg" alt="trophy">
+						</div>
+						<p class="facts__box-number">42</p>
+						<p class="facts__box-text">Awards Won</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end FACTS -->
+		<!-- begin CONTACTS -->
+		<section class="section-block section-contacts" id="contacts">
+			<div class="container-small">
+				<div class="section-title__wrapper">
+					<span class="section-title">
+						Let's discuss
+						<img src="web/img/icons/heart.png" alt="heart">
+					</span>
+				</div>
+				<p class="section-description">Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+				<div class="contacts__wrapper">
+					<!-- begin location -->
+					<div class="contacts__location">
+						<p class="contacts__topic">Cras at ultrices erat, sed vulputate!</p>
+						<p class="contacts__adress">
+							<span>2345 Setwant natrer, 1234,</span><br> 
+							<span>Washington. United States.</span><br>
+							<a href="tel:4011234567">(401) 1234 567</a><br>
+							<a href="mailto:hello@mail.com">hello@mail.com</a><br>
+							<a href="www.website.com">www.website.com</a>
+						</p>
+					</div>
+					<!-- end location -->
+					<!-- begin form -->
+					<div class="contacts__form">
+						<p class="contacts__greeting">Say hello!</p>
+						<form action="javascript:void(0)">
+							<div class="input-wrapper text-wrapper">
+								<input type="text">
+								<span>Name</span>
+							</div>
+							<div class="input-wrapper text-wrapper">
+								<input type="email">
+								<span>Email</span>
+							</div>
+							<div class="textarea-wrapper text-wrapper">
+								<textarea></textarea>
+								<span>Message</span>
+							</div>
+							<span class="submit-wrapper">
+								<i class="fa fa-envelope"></i>
+								<input type="submit" value="Send message">
+							</span>
+						</form>
+					</div>
+					<!-- end form -->
+					<!-- begin social -->
+					<div class="contacts__social">
+						<a href="javascript:void(0)"><i class="fa fa-behance"></i></a>
+						<a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
+						<a href="javascript:void(0)"><i class="fa fa-facebook"></i></a>
+						<a href="javascript:void(0)"><i class="fa fa-google-plus"></i></a>
+					</div>
+					<!-- end social -->
+				</div>
+			</div>
+		</section>
+		<!-- end CONTACTS -->
+		<!-- begin GOOGLE MAP -->
+		<section class="section-map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d41175.97356333516!2d24.05262688189955!3d49.83309306106695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1519385361749"></iframe>
+		</section>
+		<!-- end GOOGLE MAP -->
+		<!-- begin FOOTER -->
+		<footer class="section-block footer">
+			<div class="container-small">
+				<div class="footer__section">
+					<a href="javascript:void(0)">
+						<img src="web/img/icons/logo.png" alt="logo" class="footer__logo">
+					</a>
+					<p class="footer__text">eusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+				<div class="footer__section">
+					<p class="footer__title">Subscribe</p>
+					<div class="footer__subscribe">
+						<input type="text">
+						<a href="javascript:void(0)"><i class="fa fa-arrow-right"></i></a>
+					</div>
+					<p class="footer__text">eusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div class="footer__section">
+					<p class="footer__title">Explore</p>
+					<div class="footer__nav">
+						<a href="javascript:void(0)">Envato</a>
+						<a href="javascript:void(0)">Themecyrve</a>
+						<a href="javascript:void(0)">Kreativeshowcase</a>
+						<a href="javascript:void(0)">Freebiescurve</a>
+						<a href="javascript:void(0)">Themeforest</a>
+						<a href="javascript:void(0)">Microsoft</a>
+						<a href="javascript:void(0)">Google</a>
+						<a href="javascript:void(0)">Yahoo</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- end FOOTER -->
 	</div>
+
+	<!-- begin MODAL -->
+	<div class="modal-wrapper">
+		<div class="modal-box">
+			<img src="javascript:void(0)" alt="image" class="modal-content">
+			<span class="modal-caption"></span>
+			<span class="modal-close">&times;</span>
+		</div>
+	</div>
+	<!-- end MODAL -->
 
 
 	<script src="web/js/vendor/jquery-2.1.1.min.js"></script>
