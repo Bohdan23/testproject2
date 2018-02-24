@@ -6,7 +6,8 @@ $(document).ready(function () {
 			el: '.swiper-pagination',
 		},
 		speed: 900,
-        autoplay: true
+        autoplay: true,
+        allowTouchMove: false
     });
 
     $('.hamburger').on('click', function() {
@@ -17,7 +18,6 @@ $(document).ready(function () {
             $('.header__nav').removeClass('active');
         }
     });
-
     
     function trigger() {
         $(window).trigger('resize').trigger('scroll');
@@ -91,6 +91,11 @@ $(document).ready(function () {
         var idSection = $(this).attr('href'),
             section = $(idSection).offset().top + 1;
         $('body, html').animate({scrollTop: section}, 1500);
+        if($('.header__nav').hasClass('active')) {
+            setTimeout(function() {
+                $('.header__nav, .hamburger').removeClass('active');
+            }, 1600)
+        }
     });
 
     function onScroll() {
